@@ -30,9 +30,9 @@ img = img.convert('L')
 # make the image square by always stretching
 # the shorter side to the length of the longer side
 if img.size[0] > img.size[1]:
-    img = img.resize((img.size[1], img.size[1]))
-else:
     img = img.resize((img.size[0], img.size[0]))
+else:
+    img = img.resize((img.size[1], img.size[1]))
 
 # sharpen image
 img = img.filter(ImageFilter.SHARPEN)
